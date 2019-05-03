@@ -40,10 +40,19 @@ class Visualizer {
 
     //???WRITE THIS METHOD FIRST!!!
     //THESE ARE WRONG: They just illustrate how they could look
+    for (int i = 0; i < 10; i++) {
+      if (values[i] >= 0) {
+        fill(255,0,0);
+        rect(x + 40 * i, y + 100 - values[i], 40, values[i]);
+      } else {
+        fill(0,255,0);
+        rect(x + 40 * i, y + 100 - values[i], 40, values[i] * -1);
+      }
+    }
     fill(255, 0, 0);
-    rect(x+40, y+100, 60, 50);
+    rect(x, y+100, 40, 50);
     fill(0, 255, 0);
-    rect(x+120, y+50, 60, 50);
+    rect(x+40, y+50, 40, 50);
 
 
     //Width of the visualizer is 400!
