@@ -46,7 +46,7 @@ class Visualizer {
         rect(x + 40 * i, y + 100 - values[i], 40, values[i]);
       } else {
         fill(255,0,0);
-        rect(x + 40 * i, y + 100 - values[i], 40, values[i] * -1);
+        rect(x + 40 * i, y + 100, 40, values[i] * -1);
       }
     }
 
@@ -64,7 +64,7 @@ class Visualizer {
       if (values[i] >= MAX_VALUE) {
         values[i] = MAX_VALUE;
         speeds[i] = -1 * speeds[i];
-      } else if (values[i] == MIN_VALUE) {
+      } else if (values[i] <= MIN_VALUE) {
         values[i] = MIN_VALUE;
         speeds[i] = -1 * speeds[i];
       }
