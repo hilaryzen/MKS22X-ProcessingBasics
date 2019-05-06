@@ -5,7 +5,7 @@ void setup() {
   size(800, 600);
   //width = 800
   //height = 600
-  levels = 1;
+  levels = 2;
 }
 
 /*Create Sierpiski's Gasket (google an image of this)
@@ -24,6 +24,7 @@ void gasket(int levels, float v1x, float v1y, float v2x, float v2y, float v3x, f
       //Drawing white triangle in middle
       fill(255);
       triangle((v1x + v2x)/2, (v1y + v2y)/2, (v2x + v3x)/2, (v2y + v3y)/2, (v1x + v3x)/2, (v1y + v3y)/2);
+      //Recursion on the red triangles
       gasket(levels - 1, v1x, v1y, (v1x + v2x)/2, (v1y + v2y)/2, (v1x + v3x)/2, (v1y + v3y)/2);
       gasket(levels - 1, v2x, v2y, (v1x + v2x)/2, (v1y + v2y)/2, (v2x + v3x)/2, (v2y + v3y)/2);
       gasket(levels - 1, v3x, v3y, (v2x + v3x)/2, (v2y + v3y)/2, (v1x + v3x)/2, (v1y + v3y)/2);
